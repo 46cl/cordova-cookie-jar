@@ -3,10 +3,7 @@
 	id="is.assembly.cordova-cookie-jar"
 	version="1.0.0">
 	<name>Cordova Cookie Jar</name>
-	
-	 <js-module src="www/cordova-cookie-jar.js" name="cordova-cookie-jar">
-        <clobbers target="cordova-cookie-jar" />
-    </js-module>
+	 <asset target="cordova-cookie-jar.js src="www/cordova-cookie.jar" />
 	<platform name="ios">
 		
 		<config-file target="config.xml" parent="/*">
