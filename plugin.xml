@@ -7,7 +7,7 @@
 	<platform name="ios">
 		
 		<config-file target="config.xml" parent="/*">
-		<feature name="CookieJar">
+		<feature name="CDVCookieJar">
 			<param name="ios-package" value="CDVCookieJar"/>
 		</feature>
         </config-file>
