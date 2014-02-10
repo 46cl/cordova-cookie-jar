@@ -1,27 +1,17 @@
-var CDVCookieJar = (function (gap) {
-  function CDVCookieJar() {};
+var exec = require('cordova/exec');
 
-  CDVCookieJar.storeCookiesForDomain = function(domain) {
-    gap.exec(null, null, "CDVCookieJar", "storeCookiesForDomain", [domain]);
-  };
+var CDVCookieJar = function () {};
 
-  CDVCookieJar.restoreCookiesForDomain = function(domain) {
-    gap.exec(null, null, "CDVCookieJar", "restoreCookiesForDomain", [domain]);
-  };
+CDVCookieJar.storeCookiesForDomain = function(domain) {
+  exec(null, null, "CDVCookieJar", "storeCookiesForDomain", [domain]);
+};
 
-  CDVCookieJar.emptyCookiesForDomain = function(domain) {
-    gap.exec(null, null, "CDVCookieJar", "emptyCookiesForDomain", [domain]);
-  };
+CDVCookieJar.restoreCookiesForDomain = function(domain) {
+  exec(null, null, "CDVCookieJar", "restoreCookiesForDomain", [domain]);
+};
 
-  gap.addConstructor(function () {
-    if (gap.addPlugin) {
-      gap.addPlugin("cookieJar", CDVCookieJar);
-    } else {
-      if (!window.plugins) {
-        window.plugins = {};
-      }
-      window.plugins.cookieJar = CDVCookieJar;
-    }
-  });
-  return CDVCookieJar;
-})(window.cordova || window.Cordova || window.PhoneGap);
+CDVCookieJar.emptyCookiesForDomain = function(domain) {
+  exec(null, null, "CDVCookieJar", "emptyCookiesForDomain", [domain]);
+};
+
+module.exports = CDVCookieJar;
