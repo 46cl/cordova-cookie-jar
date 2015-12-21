@@ -2,6 +2,12 @@
 
 @implementation CDVCookieJar
 
+- (void) pluginInitialize
+{
+    NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    [cookieStorage setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
+}
+
 - (void) emptyCookiesForDomain:(CDVInvokedUrlCommand*)cdvCommand
 {
     NSString *domain = (NSString*) [cdvCommand.arguments objectAtIndex:0];

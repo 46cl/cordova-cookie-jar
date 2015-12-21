@@ -1,3 +1,8 @@
+Fork of @davidlanger fork of assyme/cordova-cookie-jar
+
+Sets the iOS Cookie Accept Policy to ```NSHTTPCookieAcceptPolicyAlways``` upon startup so that cookies from any domain can be accepted, instead of only cookies from the document domain with ```
+NSHTTPCookieAcceptPolicyOnlyFromMainDocumentDomain```.
+
 # Cordova Cookie Jar
 
 Your Phonegap / Cordova app needs more persistent cookie based sessions.

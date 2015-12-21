@@ -11,7 +11,7 @@
 
 		<config-file target="config.xml" parent="/widget">
 		<feature name="CDVCookieJar">
-			<param name="ios-package" value="CDVCookieJar"/>
+			<param name="ios-package" value="CDVCookieJar" onload="true" />
 		</feature>
 		</config-file>
 
