@@ -1,7 +1,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	id="is.assembly.cordova-cookie-jar"
-	version="1.0.0">
+	version="2.0.0">
 	<name>Cordova Cookie Jar</name>
 	<asset src="www/cordova-cookie-jar.js" target="plugins/cordova-cookie-jar.js" />
 	<js-module src="www/cordova-cookie-jar.js" name="CDVCookieJar">
